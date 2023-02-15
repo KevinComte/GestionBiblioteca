@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<!-- agregar hora modulo reservado -->
+<body class="bg-gray-900 bodyIndex">
+    <header>
+        <nav class="border-gray-200 px-4 lg:px-6 py-2.5 bg-gray-500 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-800 text-white">
+            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                <a href="" class="flex">
+                    <!-- <img src="media/image.png" class="mr-3 h-6 sm:h-9 w-28" alt="Inacap Logo" /> -->
+                    <!-- <span class="self-center text-xl font-semibold whitespace-nowrap">Biblioteca</span> -->
+                </a>
+                <div class="flex items-center lg:order-2">
+                    <span id="credencialAuth" class="bg-primary-700 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"></span>
+                    <a href="#" id="logOut"
+                        class=" bg-primary-700 hover:bg-blue-500 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none">Salir</a>
+                    <!-- <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button> -->
+                </div>
+                <div class="justify-between items-center w-full lg:flex lg:w-auto lg:order-1">
+                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 hover:text-blue-500"
+                                aria-current="page">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="/television.html"
+                                class="block py-2 pr-4 pl-3 border-b border-gray-100 lg:hover:bg-transparent lg:border-0  lg:p-0  hover:text-blue-500 lg:hover:bg-transparent border-gray-700">Televisión</a>
+                        </li>
+                        <li>
+                            <a href="/liberar.html"
+                                class="block py-2 pr-4 pl-3 border-b border-gray-100 lg:hover:bg-transparent lg:border-0  lg:p-0  hover:text-blue-500 lg:hover:bg-transparent border-gray-700">Liberar</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="md:container md:mx-auto mt-6">
+
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-16 shadow-2xl shadow-gray-900/50">
+            <table class="w-full text-sm text-left text-gray-400 ">
+                <thead class="text-xs uppercase bg-gray-700 text-gray-400 text-center">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            Módulo
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Capacidad
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Estado
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Hora inicio
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Hora termino
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Usuario
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Módulo reservado
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Acción
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody class="tbodyClase">
+                    <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-center" id="modulo101">
+
+                    </tr>
+                    <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-center" id="modulo102">
+
+                    </tr>
+                    <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-center" id="modulo103">
+
+                    <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-center" id="modulo104">
+
+                    </tr>
+                    <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-center" id="modulo209">
+
+                    </tr>
+                    <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-center" id="modulo210">
+
+                    </tr>
+                    <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-center" id="modulo211">
+
+                    </tr>
+                    <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-center" id="modulo212">
+
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <!-- filtrar -->
+        <div class="text-white flex justify-center">
+            <div class="md:container md:mx-16 p-4 border-2 border-gray-700 mt-10 rounded-t-lg bg-gray-900">
+                <h3 class="flex justify-center font-medium">Sección Docentes</h3>
+                <div class="flex justify-center">
+                    <form id="formFiltrar" autocomplete="off">
+                        <div class="relative z-0 mb-6 mt-6 group pr-10 justify-center ">
+                            <label for="selectFiltrarDia" class="sr-only">Filtrar día</label>
+                            <select id="selectFiltrarDia"
+                                class=" py-2.5 px-10 w-100 text-sm bg-transparent border-0 border-b-2 appearance-none text-gray-400 border-gray-700 focus:outline-none focus:ring-0 focus:border-blue-700 peer focus:text-blue-500">
+                                <option value="" selected disabled>Selecciona día</option>
+                                <option value="Lunes">Lunes</option>
+                                <option value="Martes">Martes</option>
+                                <option value="Miercoles">Miércoles</option>
+                                <option value="Jueves">Jueves</option>
+                                <option value="Viernes">Viernes</option>
+                                <option value="Sabado">Sábado</option>
+                            </select>
+
+
+                            <button type="submit"
+                                class=" mt-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white bg-blue-800 hover:shadow-lg hover:shadow-blue-800/80">
+                                Filtrar
+                            </button>
+                    </form>
+                </div>
+                <div class="flex justify-center">
+                    <button id="btnDocente"
+                        class="h-10 mt-8 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white bg-blue-800 hover:shadow-lg hover:shadow-blue-800/80">
+                        Agregar Docente
+                    </button>
+                    
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <!-- Sección horario docentes -->
+    <div class="md:container md:mx-auto  ">
+
+        <div class="relative overflow-x-auto shadow-md sm:rounded-b-lg mx-16">
+            <table class="w-full text-sm text-left text-gray-400 mb-9">
+                <thead class="text-xs uppercase bg-gray-700 text-gray-400 text-center">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            RUT
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Nombre
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Módulo
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Día
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Hora inicio
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Hora término
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Fecha (Opcional)
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Clase realizada
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Acción
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="tablaDocentes text-center text-white font-medium bg-gray-800 ">
+
+                </tbody>
+
+            </table>
+        </div>
+
+
+        <!-- Formulario docentes -->
+        <div id="docenteModal" tabindex="-1" aria-hidden="true"
+            class="h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 hidden">
+            <div class="relative w-full h-full max-w-2xl md:h-auto ">
+                <!-- Modal content -->
+                <div class="relative rounded-lg shadow bg-slate-800 ">
+                    <!-- Modal header -->
+                    <div class="flex items-start justify-between p-4 border-b rounded-t border-gray-600 ">
+                        <h3 class="text-xl font-semibold text-white">
+                            Agregar Docentes
+                        </h3>
+
+                    </div>
+                    <!-- Modal body -->
+                    <form id="formDocentes" autocomplete="off">
+                        <div class="relative z-0 w-full mb-6 mt-6 group ml-6 pr-10">
+                            <input type="text" name="docenteRut" id="Rut"
+                                class="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 appearance-none text-white border-gray-300 focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+                                placeholder=" " required />
+                            <label for="campoRut"
+                                class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300  transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">RUT</label>
+                        </div>
+                        <div class="relative z-0 w-full mb-6 mt-6 group ml-6 pr-10">
+                            <input type="text" name="docenteNombre" id="campoNombre"
+                                class="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" " required />
+                            <label for="campoNombre"
+                                class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre</label>
+                        </div>
+                        <div class="relative z-0 w-full mb-6 mt-6 group ml-6 pr-10">
+                            <label for="selectModulo" class="sr-only">Módulo</label>
+                            <select id="selectModulo"
+                                class=" py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 appearance-none text-gray-400 border-gray-300 focus:outline-none focus:ring-0 focus:border-blue-700 peer focus:text-blue-500"
+                                required>
+                                <option value="" selected disabled>Selecciona módulo</option>
+                                <option value="101A">101A</option>
+                                <option value="102A">102A</option>
+                                <option value="103A">103A</option>
+                                <option value="104A">104A</option>
+                                <option value="209A">209A</option>
+                                <option value="210A">210A</option>
+                                <option value="211A">211A</option>
+                                <option value="212A">212A</option>
+                            </select>
+                        </div>
+                        <div class="relative z-0 w-full mb-6 mt-6 group ml-6 pr-10">
+                            <label for="selectDia" class="sr-only">Día</label>
+                            <select id="selectDia"
+                                class=" py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 appearance-none text-gray-400 border-gray-300 focus:outline-none focus:ring-0 focus:border-blue-700 peer focus:text-blue-500"
+                                required>
+                                <option value="" selected disabled>Selecciona día</option>
+                                <option value="Lunes">Lunes</option>
+                                <option value="Martes">Martes</option>
+                                <option value="Miercoles">Miércoles</option>
+                                <option value="Jueves">Jueves</option>
+                                <option value="Viernes">Viernes</option>
+                                <option value="Sabado">Sábado</option>
+                            </select>
+                        </div>
+                        <div class="relative z-0 w-full mb-6 mt-6 group ml-6 pr-10">
+                            <input type="text" name="docenteHoraInicio" id="campoHoraInicioDocente"
+                                class="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" " required />
+                            <label for="campoHoraInicioDocente"
+                                class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Hora
+                                Inicio
+                            </label>
+                        </div>
+                        <div class="relative z-0 w-full mb-6 mt-6 group ml-6 pr-10">
+                            <input type="text" name="docenteHoraTermino" id="campoHoraTerminoDocente"
+                                class="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" " required />
+                            <label for="campoHoraTerminoDocente"
+                                class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Hora
+                                Término</label>
+                        </div>
+                        <div class="relative z-0 w-full mb-6 mt-6 group ml-6 pr-10">
+                            <input type="text" name="docenteFecha" id="campoFecha"
+                                class="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" " />
+                            <label for="campoFecha"
+                                class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Fecha
+                                (En caso de ser necesario)
+                            </label>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div
+                            class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                            <button type="submit" data-modal-hide="defaultModal" id="agregarDoc"
+                                class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-900 hover:bg-blue-700 focus:ring-blue-800">
+                                Agregar Docente</button>
+                            <button id="cerrarModalDocente" data-modal-hide="defaultModal" type="button"
+                                class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cerrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal reserva -->
+         <!-- Main modal -->
+
+            <div id="reservaModal" tabindex="-1" aria-hidden="true"
+            class="h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 hidden">
+            <div class="relative w-full h-full max-w-2xl md:h-auto ">
+                <!-- Modal content -->
+                <div class="relative rounded-lg shadow bg-slate-800 ">
+                    <!-- Modal header -->
+                    <div class="flex items-start justify-between p-4 border-b rounded-t border-gray-600 ">
+                        <h3 class="text-xl font-semibold text-white">
+                            Editar reserva
+                        </h3>
+
+                    </div>
+                    <!-- Modal body -->
+                    <form id="formReserva" autocomplete="off">
+                        <div class="relative z-0 w-full mb-6 mt-6 group ml-6 pr-10">
+                            <input type="text" name="textoReserva" id="campoReserva"
+                                class="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 appearance-none text-white border-gray-300 focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+                                placeholder=" " required />
+                            <label for="campoReserva"
+                                class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300  transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Horario Reserva</label>
+                        </div>
+                        <!-- Modal footer -->
+                        <div
+                            class="flex items-center p-6 space-x-2 border-t border-gray-600 rounded-b">
+                            <button type="submit" data-modal-hide="defaultModal"
+                                class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-900 hover:bg-blue-700 focus:ring-blue-800">
+                                Editar</button>
+                            <button id="cerrarModalReserva" data-modal-hide="defaultModal" type="button"
+                                class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cerrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Main modal -->
+        <!-- <div id="defaultModal" tabindex="-1" aria-hidden="true"
+            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"> -->
+        <div id="defaultModal" tabindex="-1" aria-hidden="true"
+            class="h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 hidden">
+            <div class="relative w-full h-full max-w-2xl md:h-auto ">
+                <!-- Modal content -->
+                <div class="relative rounded-lg shadow bg-slate-800 ">
+                    <!-- Modal header -->
+                    <div class="flex items-start justify-between p-4 border-b rounded-t border-gray-600 ">
+                        <h3 class="text-xl font-semibold text-white">
+                            Ocupar Módulo
+                        </h3>
+
+                    </div>
+                    <!-- Modal body -->
+                    <form id="formOcupar" autocomplete="off">
+                        <div class="relative z-0 w-full mb-6 mt-6 group ml-6 pr-10">
+                            <input type="text" name="textoUsuario" id="campoUsuario"
+                                class="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 appearance-none text-white border-gray-300 focus:border-blue-500 focus:outline-none focus:ring-0 peer"
+                                placeholder=" " required />
+                            <label for="campoUsuario"
+                                class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300  transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Usuario</label>
+                        </div>
+                        <div class="relative z-0 w-full mb-6 mt-6 group ml-6 pr-10">
+                            <input type="text" name="textoHoraTermino" id="campoHoraTermino"
+                                class="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" " />
+                            <label for="campoHoraTermino"
+                                class="peer-focus:font-medium absolute text-sm text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Hora
+                                Termino (Casos de más de 2h sino dejar en blanco)</label>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div
+                            class="flex items-center p-6 space-x-2 border-t border-gray-600 rounded-b">
+                            <button type="submit" data-modal-hide="defaultModal"
+                                class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-900 hover:bg-blue-700 focus:ring-blue-800">
+                                Ocupar Módulo</button>
+                            <button id="cerrarModal" data-modal-hide="defaultModal" type="button"
+                                class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cerrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js"></script> -->
+    <script src="/js/index.js" type="module"></script>
+    <script src="/js/docentes2.js" type="module"></script>
+</body>
+
+</html>
